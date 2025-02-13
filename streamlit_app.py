@@ -51,7 +51,7 @@ def add_row_number(df, file_label):
 
 # Upload Correct Data File
 st.write("### Upload Data File")
-correct_file = st.file_uploader("Upload Correct Excel File", type=["xlsx", "csv"], key="correct_file")
+correct_file = st.file_uploader("Upload Excel File", type=["xlsx", "csv"], key="correct_file")
 
 if correct_file:
     with st.spinner("Reading Data File..."):
@@ -71,8 +71,8 @@ if correct_file:
     selected_columns = st.multiselect("Choose columns to compare", list(df_correct.columns), key="selected_columns")
 
     # Upload Data Checking File
-    st.write("### Upload Data Checking File")
-    checking_file = st.file_uploader("Upload Data Checking Excel File", type=["xlsx", "csv"], key="checking_file")
+    st.write("### Upload Excel File")
+    checking_file = st.file_uploader("Upload Excel File", type=["xlsx", "csv"], key="checking_file")
 
     if checking_file and selected_columns and base_column:
         with st.spinner("Reading Data File..."):

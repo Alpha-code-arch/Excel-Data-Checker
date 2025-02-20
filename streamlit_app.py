@@ -152,11 +152,8 @@ if correct_file:
                 st.write("### Mismatch Analysis")
                 st.metric(label="Mismatch Percentage", value=f"{mismatch_percentage:.2f}%", delta=f"{mismatch_count} rows mismatched")
                 st.progress(mismatch_percentage / 100)
-<<<<<<< HEAD
 
         # Display the empty base column rows separately
         if not empty_base_combined.empty:
             st.write("### Rows with Empty Base Column")
             st.dataframe(empty_base_combined)
-=======
->>>>>>> b5baf6636910f3d7ce0ab75c177d74a638c3658d
